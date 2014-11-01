@@ -158,6 +158,14 @@
     }
 }
 
+.cc-license {
+	padding: 20px;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	font-size: xx-small;
+}
+
 
 
 /**
@@ -203,10 +211,15 @@
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
+	margin-bottom: 0;
 
     @include media-query($on-laptop) {
         font-size: 36px;
     }
+}
+
+.post-thumb {
+	
 }
 
 .post-nav {
@@ -219,6 +232,10 @@
 	&:hover {
 		color: $text-color;
 	}
+}
+
+.post-img {
+	margin: auto;
 }
 
 .post-content {

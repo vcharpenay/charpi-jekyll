@@ -1,10 +1,16 @@
-<head>
+<head prefix="og: http://ogp.me/ns#" profile="http://www.w3.org/2005/10/profile">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="{{ site.url }}/favicon.png" />
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ site.description }}" />
+	<meta property="og:title" content="{% if page.kind == 'home' %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
+	<meta property="og:type" content="{% if page.kind == 'home' %}website{% else %}article{% endif %}" />
+	<meta property="og:image" content="{% if page.kind == 'drawing' %}{{ site.url }}/images/thumbs/{{ page.date | date: "%F"}}.jpeg{% else %}{{ site.url }}/images/charpi.svg{% endif %}" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:site_name" content="charpi.fr" />
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/pure-min.css" | prepend: site.baseurl }}">

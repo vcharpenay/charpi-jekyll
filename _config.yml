@@ -1,16 +1,21 @@
 # Site settings
 title: Charpi - dessins, caricatures, Spaß
 email: contact@charpi.fr
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:4000" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+description: >
+  Ce site regroupe des dessins, des têtes surtout.
+  Leur auteur s'est dit que l'Internet mondial était l'endroit parfait
+  pour les diffuser.
+baseurl: ""
+#url: "http://localhost:4000"
+url: "http://www.charpi.fr"
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      kind: "drawing" # others are "home" or "others" for now
 
-exclude: TODO.md
+exclude: [README.md, deploy.sh]
 
 # Build settings
 markdown: kramdown
