@@ -11,7 +11,11 @@ kind: home
     {% for post in site.posts %}
 	  <li class="pure-u-1-4" style="vertical-align:middle;text-align:center;">
 	    <a href="{{ post.url | prepend: site.baseurl }}">
-	      <img class="pure-img post-thumb" alt="{{ post.title }}" src="{{ site.url }}/images/thumbs/{{ post.date | date: "%F" }}.jpeg"/>
+          <div style="position:relative;">
+	        <img class="pure-img post-thumb" alt="{{ post.title }}" src="{{ site.url }}/images/thumbs/{{ post.date | date: "%F" }}.jpeg"/>
+			<!-- TODO : le div apparaît inline -->
+		    <div class="thumb-caption">{{ post.title }}</div>
+	      </div>
 		</a>
 	  </li>
 	{% endfor %}

@@ -1,17 +1,16 @@
 ---
 layout: default
 ---
-<div class="post pure-g">
- 
-  <div class="pure-u-2-24" style="text-align:center;vertical-align:middle;">
-    {% unless page.next == nil %}
-      <a class="post-nav" href="{{ page.next.url }}">
-	    <span class="fa fa-chevron-circle-left fa-2x"></span>
-	  </a>
-    {% endunless %}
-  </div>
+<div class="pure-g" style="position:relative;vertical-align:middle;">
+  {% unless page.next == nil %}
+    <a class="post-nav nav-left" href="{{ page.next.url }}">
+	  <div style="position:relative;top:50%;margin-top:-1em;">
+        <span class="fa fa-chevron-circle-left fa-2x"></span>
+      </div>
+    </a>
+  {% endunless %}
 
-  <div class="pure-u-20-24" style="vertical-align:middle;">
+  <div class="pure-u-1">
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>
       <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
@@ -25,12 +24,12 @@ layout: default
     </article>
   </div>
 
-  <div class="pure-u-2-24" style="text-align:center;vertical-align:middle;">
-    {% unless page.previous == nil %}
-      <a class="post-nav" href="{{ page.previous.url }}">
-	    <span class="fa fa-chevron-circle-right fa-2x"></span>
-	  </a>
-	{% endunless %}
-  </div>
+  {% unless page.previous == nil %}
+    <a class="post-nav nav-right" href="{{ page.previous.url }}">
+	  <div style="position:relative;top:50%;margin-top:-1em;">
+        <span class="fa fa-chevron-circle-right fa-2x"></span>
+	  </div>
+    </a>
+  {% endunless %}
 
 </div>

@@ -89,7 +89,6 @@
 }
 
 
-
 /**
  * Site footer
  */
@@ -218,11 +217,28 @@
     }
 }
 
-.post-thumb {
-	
+/*
+.post-thumb:hover ~ .thumb-caption {
+	visibility: visible;
+}
+*/
+
+.thumb-caption {
+	color: #fff;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: $color-alpha;
+	visibility: hidden;
 }
 
 .post-nav {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+
 	color: fade-out($text-color, 0.8);
 
 	&:visited {
@@ -232,6 +248,16 @@
 	&:hover {
 		color: $text-color;
 	}
+}
+
+.nav-left {
+	text-align: left;
+	left: 0%;
+}
+
+.nav-right {
+	text-align: right;
+	left: 50%;
 }
 
 .post-img {

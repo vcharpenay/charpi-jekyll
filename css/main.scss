@@ -17,6 +17,8 @@ $text-color:       #111;
 $background-color: #ffffff;
 $brand-color:      #2a7ae2;
 
+$color-alpha: transparentize(#000, 0.3);
+
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
