@@ -6,8 +6,8 @@ description: >
   Leur auteur s'est dit que l'Internet mondial était l'endroit parfait
   pour les diffuser.
 baseurl: ""
-url: "http://localhost:4000"
-#url: "http://www.charpi.fr"
+#url: "http://localhost:4000"
+url: "http://www.charpi.fr"
 defaults:
   -
     scope:
