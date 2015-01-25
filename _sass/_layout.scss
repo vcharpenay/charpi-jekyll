@@ -89,6 +89,7 @@
 }
 
 
+
 /**
  * Site footer
  */
@@ -168,6 +169,23 @@
 
 
 /**
+ * Pagination
+ */
+.pagination {
+	text-align: center;
+	color: $grey-color;
+}
+
+.pagination-prev {
+	margin-right: 10px;
+}
+
+.pagination-next {
+	margin-left: 10px;
+}
+
+
+/**
  * Page content
  */
 .page-content {
@@ -236,6 +254,7 @@
 
 .post-nav {
 	position: absolute;
+	top: 0%;
 	width: 50%;
 	height: 100%;
 
@@ -262,6 +281,9 @@
 
 .post-img {
 	margin: auto;
+}
+
+.post-caption {
 }
 
 .post-content {

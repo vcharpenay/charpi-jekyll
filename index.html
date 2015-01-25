@@ -8,7 +8,7 @@ kind: home
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list pure-g">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
 	  <li class="pure-u-1-4" style="vertical-align:middle;text-align:center;">
 	    <a href="{{ post.url | prepend: site.baseurl }}">
           <div style="position:relative;">
@@ -19,5 +19,16 @@ kind: home
 		</a>
 	  </li>
 	{% endfor %}
+  </ul>
+  
+  <ul class="pure-paginator pagination">
+	{% unless paginator.page == 1 %}
+	  <li><a class="pagination-prev prev" href="{{ paginator.previous_page_path }}">&lt;</a></li>
+	{% endunless %}
+	<li>page {{ paginator.page }}/{{ paginator.total_pages }}</li>
+	{% unless paginator.page == paginator.total_pages %}
+	  <li><a class="pagination-next next" href="{{ paginator.next_page_path }}">&gt;</a></li>
+	{% endunless %}
+  </ul>
 
 </div>

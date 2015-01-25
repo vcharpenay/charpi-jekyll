@@ -1,7 +1,7 @@
 À faire
 =======
 
-* dessin de l'à propos (je suis l'actualité)
+* partage facebook à améliorer (texte), partage Twitter
 * police du menu pas droid ? (valable aussi pour Contact et About)
 * titre du post en hover dans la page d'accueil
   (fait un flickr désagréable. À faire en js ?)

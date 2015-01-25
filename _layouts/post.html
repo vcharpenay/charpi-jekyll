@@ -2,13 +2,6 @@
 layout: default
 ---
 <div class="pure-g" style="position:relative;vertical-align:middle;">
-  {% unless page.next == nil %}
-    <a class="post-nav nav-left" href="{{ page.next.url }}">
-	  <div style="position:relative;top:50%;margin-top:-1em;">
-        <span class="fa fa-chevron-circle-left fa-2x"></span>
-      </div>
-    </a>
-  {% endunless %}
 
   <div class="pure-u-1">
     <header class="post-header">
@@ -18,18 +11,30 @@ layout: default
 
     <article class="post-content">
 	  <figure>
-	    <img class="pure-img post-img" alt="" src="{{ site.url }}/images/{{ page.date | date: "%F" }}.jpeg"/>
-		<figcaption>{{ content }}</figcaption>
+      <div style="position:relative;overflow:hidden;">
+
+		{% unless page.next == nil %}
+        <a class="post-nav nav-left" href="{{ page.next.url }}">
+	      <div style="position:relative;top:50%;margin-top:-1em;">
+            <span class="fa fa-chevron-circle-left fa-2x"></span>
+          </div>
+        </a>
+        {% endunless %}
+  
+		<img class="pure-img post-img" alt="" src="{{ site.url }}/images/{{ page.date | date: "%F" }}.jpeg"/>
+        
+		{% unless page.previous == nil %}
+        <a class="post-nav nav-right" href="{{ page.previous.url }}">
+	      <div style="position:relative;top:50%;margin-top:-1em;">
+            <span class="fa fa-chevron-circle-right fa-2x"></span>
+	      </div>
+        </a>
+        {% endunless %}
+      </div>
+		<figcaption class="post-caption">{{ content }}</figcaption>
+	
 	  </figure>
     </article>
   </div>
-
-  {% unless page.previous == nil %}
-    <a class="post-nav nav-right" href="{{ page.previous.url }}">
-	  <div style="position:relative;top:50%;margin-top:-1em;">
-        <span class="fa fa-chevron-circle-right fa-2x"></span>
-	  </div>
-    </a>
-  {% endunless %}
 
 </div>
