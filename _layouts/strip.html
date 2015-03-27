@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<div class="pure-g" style="position:relative;vertical-align:middle;">
+
+  <div class="pure-u-1">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    </header>
+
+    <article class="post-content">
+      {% unless page.next == nil %}
+      <a class="post-nav nav-left" style="position:relative;" href="{{ page.next.url }}">
+	    <div style="position:relative;margin-top:-1em;width:50%;">
+          <span class="fa fa-chevron-circle-left fa-2x"></span>
+        </div>
+      </a>
+      {% endunless %}
+      
+      {% unless page.previous == nil %}
+      <a class="post-nav nav-right" style="position:relative;" href="{{ page.previous.url }}">
+	    <div style="position:relative;margin-top:-1em;width:50%;">
+          <span class="fa fa-chevron-circle-right fa-2x"></span>
+	    </div>
+      </a>
+      {% endunless %}
+      
+	  <figure>
+        <figcaption class="post-caption">{{ content }}</figcaption>
+        <div style="position:relative;overflow:hidden;margin-left:10%;margin-right:10%">
+          <img class="pure-img post-img" alt="" src="{{ site.url }}/images/{{ page.date | date: "%F" }}.jpeg"/>
+        </div>
+	  </figure>
+      
+      {% unless page.next == nil %}
+      <a class="post-nav nav-left" style="position:relative;" href="{{ page.next.url }}">
+	    <div style="position:relative;margin-top:-1em;width:50%;">
+          <span class="fa fa-chevron-circle-left fa-2x"></span>
+        </div>
+      </a>
+      {% endunless %}
+      
+      {% unless page.previous == nil %}
+      <a class="post-nav nav-right" style="position:relative;" href="{{ page.previous.url }}">
+	    <div style="position:relative;margin-top:-1em;width:50%;">
+          <span class="fa fa-chevron-circle-right fa-2x"></span>
+	    </div>
+      </a>
+      {% endunless %}
+    </article>
+  </div>
+
+</div>

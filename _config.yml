@@ -15,6 +15,7 @@ defaults:
       path: ""
     values:
       kind: "drawing" # others are "home" or "others" for now
+      ext: "jpeg" # in case other image formats are used, such as .gif
 
 exclude: [README.md, deploy.sh]
 

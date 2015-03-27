@@ -21,7 +21,7 @@ layout: default
         </a>
         {% endunless %}
   
-		<img class="pure-img post-img" alt="" src="{{ site.url }}/images/{{ page.date | date: "%F" }}.jpeg"/>
+		<img class="pure-img post-img" alt="" src="{{ site.url }}/images/{{ page.date | date: "%F" }}.{{ page.ext }}"/>
         
 		{% unless page.previous == nil %}
         <a class="post-nav nav-right" href="{{ page.previous.url }}">
