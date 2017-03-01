@@ -16,6 +16,8 @@ defaults:
     values:
       kind: "drawing" # others are "home" or "others" for now
       ext: "jpeg" # in case other image formats are used, such as .gif
+      sync: false # activates sync between Soundcloud widget and spritesheet
+      sprite: "100%" # activates sync between Soundcloud widget and spritesheet
 
 exclude: [README.md, deploy.sh]
 

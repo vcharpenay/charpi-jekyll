@@ -3,6 +3,20 @@ layout: default
 ---
 <div class="pure-g" style="position:relative;vertical-align:middle;">
 
+  <script>
+	// make it clear this day is a sad day 
+	document.onreadystatechange = function () {
+      if (document.readyState == 'interactive') {
+        document.body.style.background = 'black';
+        document.getElementsByClassName('site-title-im')[0].src = '{{ site.url }}/images/charpi-glow.svg';
+        document.getElementsByClassName('post-title')[0].style.color = '#828282';
+        document.getElementsByClassName('post-meta')[0].style.color = '#4d4d4d';
+        document.getElementsByClassName('pure-menu')[0].style.background = 'black';
+        document.getElementsByClassName('site-footer')[0].style['border-top-color'] = '#171717';
+      }
+    }
+  </script>
+
   <div class="pure-u-1">
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>
@@ -20,10 +34,8 @@ layout: default
           </div>
         </a>
         {% endunless %}
-
-		<div class="post-img-frame" {% if page.sync %}style="max-width:{{ page.sprite }};"{% endif %}>
-			<img class="pure-img post-img" {% if page.sync %}style="max-width:none;"{% endif %} alt="" src="{{ site.url }}/images/{{ page.date | date: "%F" }}.{{ page.ext }}"/>
-        </div>
+  
+		<img class="pure-img post-img post-img-small" alt="" src="{{ site.url }}/images/{{ page.date | date: "%F" }}.{{ page.ext }}"/>
         
 		{% unless page.previous == nil %}
         <a class="post-nav nav-right" href="{{ page.previous.url }}">
